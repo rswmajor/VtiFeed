@@ -44,6 +44,9 @@ public class PackageFeed implements Serializable {
     }
 
     public String getDownloadLink(){
+        if (feed == null) {
+            return "";
+        }
         return feed.getUrlRepository() + "/" + filename;
     }
 
